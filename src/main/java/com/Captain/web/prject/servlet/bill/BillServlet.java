@@ -79,7 +79,7 @@ public class BillServlet extends HttpServlet {
         //获取供应商列表
         ProviderService providerService = new ProviderServiceImpl();
 
-
+        //判断搜索框中是否有值
         if(queryProductName == null){
             queryProductName = "";
         }
