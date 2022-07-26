@@ -81,12 +81,15 @@ public class BillServlet extends HttpServlet {
 
         //判断搜索框中是否有值
         if(queryProductName == null){
+            //如果搜索框为空则传入空字符串
             queryProductName = "";
         }
         if(temp1!=null && !temp1.equals("")){
+            //如果temp1不为空则传入对应的值
             queryProviderId = Integer.parseInt(temp1);
         }
         if(temp2!=null && !temp2.equals("")){
+            //如果temp2不为空则传入对应的值
             queryIsPayment = Integer.parseInt(temp2);
         }
 
