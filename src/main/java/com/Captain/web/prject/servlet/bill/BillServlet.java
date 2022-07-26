@@ -36,17 +36,24 @@ public class BillServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String method = request.getParameter("method");
 
+        //根据具体的请求调用对应的处理方法
         if(method.equals("query") && method!=null){
+            //获取列表
             this.getBillList(request, response);
         }else if(method.equals("add") && method!=null){
+            //添加
             this.addBill(request, response);
         }else if(method.equals("getproviderlist") && method!=null){
+            //获取菜单
             this.getProviderList(request, response);
         }else if(method.equals("delbill") && method!=null){
+            //删除
             this.deleteBillById(request, response);
         }else if(method.equals("modify") && method!=null){
+            //跳转修改页
             this.getBillId(request,response,"billmodify.jsp");
         }else if(method.equals("modifysave") && method!=null){
+            //跳转添加页
             this.modify(request,response);
         }else  if(method.equals("view") && method!=null){
             this.getBillId(request, response, "billview.jsp");
