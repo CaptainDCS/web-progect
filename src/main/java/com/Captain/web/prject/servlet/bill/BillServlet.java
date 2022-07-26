@@ -3,7 +3,7 @@ package com.Captain.web.prject.servlet.bill;
  * projectName:web-progect
  * author:dcs
  * time:2021/10/30 9:53
- * description:
+ * description:再试试远程库修改，IDEA再拉取远程库
  */
 
 import com.Captain.web.prject.domain.Bill;
