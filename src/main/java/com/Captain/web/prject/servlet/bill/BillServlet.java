@@ -146,6 +146,7 @@ public class BillServlet extends HttpServlet {
         String providerId = request.getParameter("providerId");
         String isPayment = request.getParameter("isPayment");
 
+        //存放表单数据
         Bill bill = new Bill();
         bill.setBillCode(billCode);
         bill.setProductName(productName);
@@ -158,6 +159,7 @@ public class BillServlet extends HttpServlet {
         bill.setCreatedBy(((User)request.getSession().getAttribute(Constants.USER_SESSION)).getId());
         bill.setCreationDate(new Date());
 
+        //将表单数据提交至Service层进行处理
         BillService billService = new BillServiceImpl();
         if(billService.addBill(bill)){
             try {
