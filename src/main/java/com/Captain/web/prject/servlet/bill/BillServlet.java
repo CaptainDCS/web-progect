@@ -80,6 +80,7 @@ public class BillServlet extends HttpServlet {
         ProviderService providerService = new ProviderServiceImpl();
 
         //判断搜索框中是否有值，测试一下下
+        //冲突行，你冲不冲突吧
         if(queryProductName == null){
             //如果搜索框为空则传入空字符串
             queryProductName = "";
